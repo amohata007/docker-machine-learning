@@ -8,4 +8,7 @@ os.system('systemctl enable docker')
 #Now the docker service is running so we need to start the docker container image
 #Which we have pulled from DockerHub containing CentOS along with necessary machine learning tools.
 
-os.system('docker run -it -privileged centosforML:latest')
+os.system('docker start centosml')
+os.system('docker attach centosml')
+
+#By this we get the docker prompt inside the Python Script!
